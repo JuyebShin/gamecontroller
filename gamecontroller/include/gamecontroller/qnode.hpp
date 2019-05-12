@@ -25,6 +25,7 @@
 #include <QThread>
 #include <QStringListModel>
 
+#include <msg_generate/robocupcontroller.h>
 
 
 /*****************************************************************************

@@ -93,7 +93,7 @@
       <string>OPEN</string>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -155,7 +155,14 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="NUM_line"/>
+         <widget class="QLineEdit" name="NUM_line">
+          <property name="text">
+           <string>1</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>

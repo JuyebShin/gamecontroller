@@ -16,8 +16,6 @@
 #include <std_msgs/String.h>
 #include <sstream>
 #include "../include/gamecontroller/qnode.hpp"
-#include "../include/gamecontroller/robocupController_msg.h"
-#include "../include/gamecontroller/robocupController2.h"
 
 
 namespace gamecontroller {
@@ -47,7 +45,7 @@ bool QNode::init() {
     ros::start(); // explicitly needed since our nodehandle is going out of scope.
     ros::NodeHandle n;
     // Add your ros communications here.
-    controller_pub = n.advertise<gamecontroller::robocupController2>("gamecontroller",100);
+    controller_pub = n.advertise<msg_generate::robocupcontroller>("gamecontroller",100);
     start();
 
     return true;
@@ -70,11 +68,11 @@ void QNode::run() {
 
 void QNode::ready()
 {
-    gamecontroller::robocupController_msg RCmsg;
-    RCmsg.state = 1;
-    RCmsg.penalty = 1;
+//    gamecontroller::robocupController_msg RCmsg;
+//    RCmsg.state = 1;
+//    RCmsg.penalty = 1;
 
-    controller_pub.publish(RCmsg);
+//    controller_pub.publish(RCmsg);
 
 }
 
