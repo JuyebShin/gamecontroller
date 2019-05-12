@@ -122,7 +122,7 @@ void MainWindow::on_Server_Open_clicked()
     {
         QString n = ui.NUM_line->text();
         playerNum = n.toInt() - 1;
-        if(playerNum < 0) playerNum = 0;
+        if(playerNum < 0) playerNum = 1;
 
         ui.NUM_line->setText(QString::number(playerNum + 1));
 
@@ -166,12 +166,12 @@ void MainWindow::readData()
         {
         case 1:
             ui.textEdit->append("1st Half");
-            RCmsg.penalty = (int)robocupData.teams[0].players[playerNum].penalty;
+            RCmsg.penalty = (int)robocupData.teams[1].players[playerNum].penalty;
             break;
 
         case 0:
             ui.textEdit->append("2nd Half");
-            RCmsg.penalty = (int)robocupData.teams[1].players[playerNum].penalty;
+            RCmsg.penalty = (int)robocupData.teams[0].players[playerNum].penalty;
             break;
         }
 
